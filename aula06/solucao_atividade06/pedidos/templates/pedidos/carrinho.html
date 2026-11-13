@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Carrinho - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Seu carrinho</h2>
+
+  {% if itens %}
+    <table class="carrinho">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Produtor</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in itens %}
+          <tr>
+            <td>
+              <a href="{% url 'catalogo:produto' slug=item.produto.slug %}">
+                {{ item.produto.nome }}</a>
+            </td>
+            <td>{{ item.produto.produtor.nome }}</td>
+            <td>
+              {{ item.quantidade|floatformat:"-3" }} {{ item.produto.unidade.sigla }}
+            </td>
+            <td>{{ item.produto.preco_centavos|reais }}</td>
+            <td>{{ item.subtotal_centavos|reais }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total</td>
+          <td>{{ total_centavos|reais }}</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="acoes">
+      <a class="botao" href="{% url 'pedidos:checkout' %}">Fechar o pedido</a>
+      <form method="post" action="{% url 'pedidos:esvaziar' %}">
+        {% csrf_token %}
+        <button type="submit" class="secundario">Esvaziar o carrinho</button>
+      </form>
+    </div>
+  {% else %}
+    <p class="vazio">
+      Seu carrinho está vazio.
+      <a href="{% url 'catalogo:produtos' %}">Ver os produtos</a>.
+    </p>
+  {% endif %}
+{% endblock %}

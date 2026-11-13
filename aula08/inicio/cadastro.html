@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block titulo %}Cadastro - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Criar uma conta</h2>
+
+  <form class="dados-pedido" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="campo">
+      <label for="{{ form.username.id_for_label }}">Usuário</label>
+      {{ form.username }}
+      {{ form.username.errors }}
+    </div>
+
+    <div class="campo">
+      <label for="{{ form.password1.id_for_label }}">Senha</label>
+      {{ form.password1 }}
+      {{ form.password1.errors }}
+    </div>
+
+    <div class="campo">
+      <label for="{{ form.password2.id_for_label }}">Senha, de novo</label>
+      {{ form.password2 }}
+      {{ form.password2.errors }}
+    </div>
+
+    <button type="submit">Criar conta</button>
+  </form>
+
+  <p class="resumo">Já tem conta? <a href="{% url 'contas:entrar' %}">Entrar</a>.</p>
+{% endblock %}

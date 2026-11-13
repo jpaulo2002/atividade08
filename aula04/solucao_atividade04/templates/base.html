@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}AgroFeira Paragominas{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/agrofeira.css' %}">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="{% url 'catalogo:home' %}">
+      AgroFeira <span>Paragominas</span>
+    </a>
+    <nav>
+      <a href="{% url 'catalogo:home' %}">Início</a>
+      <a href="{% url 'catalogo:produtos' %}">Produtos</a>
+      <a href="{% url 'catalogo:produtores' %}">Produtores</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block conteudo %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <p>AgroFeira Paragominas - produtores da Colônia do Uraim e da região.
+       Nomes de produtores e sítios fictícios; a geografia é real.</p>
+  </footer>
+</body>
+</html>

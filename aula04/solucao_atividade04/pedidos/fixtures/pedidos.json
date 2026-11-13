@@ -1,0 +1,202 @@
+[
+  {
+    "model": "pedidos.pontoretirada",
+    "pk": 1,
+    "fields": {
+      "nome": "Praça Célio Miranda",
+      "endereco": "Praça Célio Miranda, Centro",
+      "horario": "sábado, das 6h às 11h",
+      "produtores": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "pedidos.pontoretirada",
+    "pk": 2,
+    "fields": {
+      "nome": "UFRA - campus Paragominas",
+      "endereco": "Rodovia PA-256, portaria do campus",
+      "horario": "quarta-feira, das 11h às 13h",
+      "produtores": [
+        1,
+        3,
+        4,
+        6,
+        8
+      ]
+    }
+  },
+  {
+    "model": "pedidos.pontoretirada",
+    "pk": 3,
+    "fields": {
+      "nome": "Galpão da Colônia do Uraim",
+      "endereco": "Vicinal do Uraim, galpão da associação de moradores",
+      "horario": "domingo, das 7h às 10h",
+      "produtores": [
+        2,
+        5,
+        6,
+        8
+      ]
+    }
+  },
+  {
+    "model": "pedidos.pedido",
+    "pk": 1,
+    "fields": {
+      "comprador": "Ana Beatriz Costa",
+      "telefone": "(91) 90000-1001",
+      "ponto_retirada": 1,
+      "situacao": "entregue",
+      "criado_em": "2026-09-19T20:10:00-03:00"
+    }
+  },
+  {
+    "model": "pedidos.pedido",
+    "pk": 2,
+    "fields": {
+      "comprador": "Restaurante Sabor do Capim",
+      "telefone": "(91) 90000-1002",
+      "ponto_retirada": 1,
+      "situacao": "separado",
+      "criado_em": "2026-09-25T09:00:00-03:00"
+    }
+  },
+  {
+    "model": "pedidos.pedido",
+    "pk": 3,
+    "fields": {
+      "comprador": "Carlos Henrique Lima",
+      "telefone": "(91) 90000-1003",
+      "ponto_retirada": 2,
+      "situacao": "recebido",
+      "criado_em": "2026-09-29T12:30:00-03:00"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 1,
+    "fields": {
+      "pedido": 1,
+      "produto": 2,
+      "nome_produto": "Açaí grosso",
+      "nome_produtor": "Dona Raimunda do Açaí",
+      "nome_unidade": "litro",
+      "preco_unitario_centavos": 2800,
+      "quantidade": "2.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 2,
+    "fields": {
+      "pedido": 1,
+      "produto": 4,
+      "nome_produto": "Farinha d'água",
+      "nome_produtor": "Seu Tonico da Farinha",
+      "nome_unidade": "lata de 18 litros",
+      "preco_unitario_centavos": 15000,
+      "quantidade": "1.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 3,
+    "fields": {
+      "pedido": 2,
+      "produto": 16,
+      "nome_produto": "Pimenta-do-reino branca",
+      "nome_produtor": "Seu Benedito da Pimenta",
+      "nome_unidade": "quilo",
+      "preco_unitario_centavos": 4500,
+      "quantidade": "1.500"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 4,
+    "fields": {
+      "pedido": 2,
+      "produto": 8,
+      "nome_produto": "Jambu",
+      "nome_produtor": "Irmãos Sousa",
+      "nome_unidade": "maço",
+      "preco_unitario_centavos": 400,
+      "quantidade": "6.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 5,
+    "fields": {
+      "pedido": 2,
+      "produto": 6,
+      "nome_produto": "Tucupi",
+      "nome_produtor": "Seu Tonico da Farinha",
+      "nome_unidade": "litro",
+      "preco_unitario_centavos": 800,
+      "quantidade": "3.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 6,
+    "fields": {
+      "pedido": 2,
+      "produto": 10,
+      "nome_produto": "Chicória-do-pará",
+      "nome_produtor": "Irmãos Sousa",
+      "nome_unidade": "maço",
+      "preco_unitario_centavos": 350,
+      "quantidade": "6.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 7,
+    "fields": {
+      "pedido": 3,
+      "produto": 12,
+      "nome_produto": "Mel de uruçu",
+      "nome_produtor": "Dona Graça do Mel",
+      "nome_unidade": "pote",
+      "preco_unitario_centavos": 6000,
+      "quantidade": "2.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 8,
+    "fields": {
+      "pedido": 3,
+      "produto": 23,
+      "nome_produto": "Polpa de cupuaçu",
+      "nome_produtor": "Dona Francisca das Polpas",
+      "nome_unidade": "quilo",
+      "preco_unitario_centavos": 2200,
+      "quantidade": "2.000"
+    }
+  },
+  {
+    "model": "pedidos.itempedido",
+    "pk": 9,
+    "fields": {
+      "pedido": 3,
+      "produto": 18,
+      "nome_produto": "Chocolate 70%",
+      "nome_produtor": "Dona Socorro do Cacau",
+      "nome_unidade": "barra",
+      "preco_unitario_centavos": 1800,
+      "quantidade": "3.000"
+    }
+  }
+]

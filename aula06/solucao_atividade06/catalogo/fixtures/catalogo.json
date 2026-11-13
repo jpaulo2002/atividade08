@@ -1,0 +1,1338 @@
+[
+  {
+    "model": "catalogo.categoria",
+    "pk": 1,
+    "fields": {
+      "nome": "Açaí e frutos da floresta",
+      "slug": "acai-e-frutos-da-floresta"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 2,
+    "fields": {
+      "nome": "Polpas congeladas",
+      "slug": "polpas-congeladas"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 3,
+    "fields": {
+      "nome": "Derivados da mandioca",
+      "slug": "derivados-da-mandioca"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 4,
+    "fields": {
+      "nome": "Especiarias",
+      "slug": "especiarias"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 5,
+    "fields": {
+      "nome": "Cacau e chocolate",
+      "slug": "cacau-e-chocolate"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 6,
+    "fields": {
+      "nome": "Mel e derivados da colmeia",
+      "slug": "mel-e-derivados-da-colmeia"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 7,
+    "fields": {
+      "nome": "Hortaliças e temperos verdes",
+      "slug": "hortalicas-e-temperos-verdes"
+    }
+  },
+  {
+    "model": "catalogo.categoria",
+    "pk": 8,
+    "fields": {
+      "nome": "Frutas frescas",
+      "slug": "frutas-frescas"
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 1,
+    "fields": {
+      "nome": "quilo",
+      "sigla": "kg",
+      "fracionavel": true
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 2,
+    "fields": {
+      "nome": "litro",
+      "sigla": "L",
+      "fracionavel": true
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 3,
+    "fields": {
+      "nome": "grama",
+      "sigla": "g",
+      "fracionavel": true
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 4,
+    "fields": {
+      "nome": "saca de 60 kg",
+      "sigla": "saca",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 5,
+    "fields": {
+      "nome": "lata de 18 litros",
+      "sigla": "lata",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 6,
+    "fields": {
+      "nome": "rasa",
+      "sigla": "rasa",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 7,
+    "fields": {
+      "nome": "maço",
+      "sigla": "maço",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 8,
+    "fields": {
+      "nome": "dúzia",
+      "sigla": "dz",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 9,
+    "fields": {
+      "nome": "pote",
+      "sigla": "pote",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 10,
+    "fields": {
+      "nome": "vidro",
+      "sigla": "vidro",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 11,
+    "fields": {
+      "nome": "bandeja",
+      "sigla": "bdj",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 12,
+    "fields": {
+      "nome": "barra",
+      "sigla": "barra",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 13,
+    "fields": {
+      "nome": "cacho",
+      "sigla": "cacho",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.unidade",
+    "pk": 14,
+    "fields": {
+      "nome": "cento",
+      "sigla": "cento",
+      "fracionavel": false
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 1,
+    "fields": {
+      "nome": "Dona Raimunda do Açaí",
+      "slug": "dona-raimunda-do-acai",
+      "comunidade": "Sítio Recanto do Açaí — Rio Capim",
+      "descricao": "Bate o açaí de madrugada, no mesmo dia da colheita. Três gerações no mesmo açaizal de várzea.",
+      "caf": "PA0412.2025.00137",
+      "cooperativa": "Cooperativa Mista do Rio Capim",
+      "formas_pagamento": "Pix, dinheiro",
+      "chave_pix": "raimunda.acai@exemplo.com",
+      "pedido_minimo_centavos": 3000
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 2,
+    "fields": {
+      "nome": "Seu Tonico da Farinha",
+      "slug": "seu-tonico-da-farinha",
+      "comunidade": "Colônia do Uraim",
+      "descricao": "Casa de farinha própria. Farinha d'água de puba, torrada no forno de lenha.",
+      "caf": "PA0412.2024.00981",
+      "cooperativa": "",
+      "formas_pagamento": "Pix, dinheiro, cartão",
+      "chave_pix": "(91) 90000-0101",
+      "pedido_minimo_centavos": 2000
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 3,
+    "fields": {
+      "nome": "Irmãos Sousa",
+      "slug": "irmaos-sousa",
+      "comunidade": "Chácara Dois Irmãos — Vila de Cumaru",
+      "descricao": "Hortaliças e temperos colhidos na véspera da feira, sem agrotóxico.",
+      "caf": "PA0412.2025.00455",
+      "cooperativa": "",
+      "formas_pagamento": "Pix, dinheiro",
+      "chave_pix": "irmaossousa@exemplo.com",
+      "pedido_minimo_centavos": 1000
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 4,
+    "fields": {
+      "nome": "Dona Graça do Mel",
+      "slug": "dona-graca-do-mel",
+      "comunidade": "Sítio Água Fria — PA-125",
+      "descricao": "Cria abelha sem ferrão (uruçu) e abelha africanizada, em caixas espalhadas pelo quintal agroflorestal.",
+      "caf": "PA0412.2023.01220",
+      "cooperativa": "Associação dos Meliponicultores de Paragominas",
+      "formas_pagamento": "Pix",
+      "chave_pix": "(91) 90000-0202",
+      "pedido_minimo_centavos": 3500
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 5,
+    "fields": {
+      "nome": "Seu Benedito da Pimenta",
+      "slug": "seu-benedito-da-pimenta",
+      "comunidade": "Sítio Nova Aliança — Ramal do Uraim",
+      "descricao": "Pimenta-do-reino secada ao sol no terreiro. Vende a saca para quem revende e o quilo para quem cozinha.",
+      "caf": "PA0412.2024.00310",
+      "cooperativa": "Cooperativa Agrícola do Uraim",
+      "formas_pagamento": "Pix, dinheiro",
+      "chave_pix": "benedito.pimenta@exemplo.com",
+      "pedido_minimo_centavos": 5000
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 6,
+    "fields": {
+      "nome": "Dona Socorro do Cacau",
+      "slug": "dona-socorro-do-cacau",
+      "comunidade": "Sítio Boa Esperança — Rio Uraim",
+      "descricao": "Cacau de sombra, fermentado no cocho de madeira. Faz o chocolate em casa, em barras de 100 g.",
+      "caf": "PA0412.2025.00702",
+      "cooperativa": "Cooperativa Agrícola do Uraim",
+      "formas_pagamento": "Pix, cartão",
+      "chave_pix": "(91) 90000-0303",
+      "pedido_minimo_centavos": 2500
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 7,
+    "fields": {
+      "nome": "Família Oliveira",
+      "slug": "familia-oliveira",
+      "comunidade": "Fazenda Santa Luzia — BR-010, km 210",
+      "descricao": "Pomar familiar à beira da BR-010: banana, laranja e maracujá o ano inteiro.",
+      "caf": "PA0412.2023.00056",
+      "cooperativa": "",
+      "formas_pagamento": "Pix, dinheiro, cartão",
+      "chave_pix": "familiaoliveira@exemplo.com",
+      "pedido_minimo_centavos": 2000
+    }
+  },
+  {
+    "model": "catalogo.produtor",
+    "pk": 8,
+    "fields": {
+      "nome": "Dona Francisca das Polpas",
+      "slug": "dona-francisca-das-polpas",
+      "comunidade": "Colônia do Uraim",
+      "descricao": "Despolpa e congela a fruta no mesmo dia. Entrega em caixa térmica.",
+      "caf": "PA0412.2024.01133",
+      "cooperativa": "Cooperativa Mista do Rio Capim",
+      "formas_pagamento": "Pix",
+      "chave_pix": "(91) 90000-0404",
+      "pedido_minimo_centavos": 4000
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 1,
+    "fields": {
+      "produtor": 1,
+      "nome": "Sítio Recanto do Açaí",
+      "comunidade": "Rio Capim",
+      "referencia": "Ramal do Capim, km 18, depois da ponte de madeira",
+      "distancia_sede_km": 62,
+      "area_total_ha": "12.0",
+      "area_saf_ha": "9.5",
+      "manejo": "agroecologico",
+      "fonte_agua": "rio",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 2,
+    "fields": {
+      "produtor": 2,
+      "nome": "Sítio Pé de Pau",
+      "comunidade": "Colônia do Uraim",
+      "referencia": "Vicinal do Uraim, casa de farinha na beira da estrada",
+      "distancia_sede_km": 28,
+      "area_total_ha": "25.0",
+      "area_saf_ha": "3.0",
+      "manejo": "convencional",
+      "fonte_agua": "poço amazonas",
+      "casa_de_farinha": true,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 3,
+    "fields": {
+      "produtor": 2,
+      "nome": "Roça do Igarapé Grande",
+      "comunidade": "Colônia do Uraim",
+      "referencia": "Seguir a vicinal 3 km depois do Sítio Pé de Pau",
+      "distancia_sede_km": 31,
+      "area_total_ha": "8.0",
+      "area_saf_ha": "0.0",
+      "manejo": "convencional",
+      "fonte_agua": "igarapé",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 4,
+    "fields": {
+      "produtor": 3,
+      "nome": "Chácara Dois Irmãos",
+      "comunidade": "Vila de Cumaru",
+      "referencia": "Na saída da vila, portão azul",
+      "distancia_sede_km": 15,
+      "area_total_ha": "3.5",
+      "area_saf_ha": "0.5",
+      "manejo": "transicao",
+      "fonte_agua": "poço artesiano",
+      "casa_de_farinha": false,
+      "camara_fria": true
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 5,
+    "fields": {
+      "produtor": 4,
+      "nome": "Sítio Água Fria",
+      "comunidade": "PA-125",
+      "referencia": "PA-125, km 7, entrada à direita depois da placa do meliponário",
+      "distancia_sede_km": 22,
+      "area_total_ha": "6.0",
+      "area_saf_ha": "4.5",
+      "manejo": "agroecologico",
+      "fonte_agua": "nascente",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 6,
+    "fields": {
+      "produtor": 5,
+      "nome": "Sítio Nova Aliança",
+      "comunidade": "Ramal do Uraim",
+      "referencia": "Ramal do Uraim, km 9, casa amarela",
+      "distancia_sede_km": 35,
+      "area_total_ha": "30.0",
+      "area_saf_ha": "2.0",
+      "manejo": "convencional",
+      "fonte_agua": "poço artesiano",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 7,
+    "fields": {
+      "produtor": 5,
+      "nome": "Lote 14",
+      "comunidade": "Ramal do Uraim",
+      "referencia": "Ramal do Uraim, km 12, o pimental novo",
+      "distancia_sede_km": 38,
+      "area_total_ha": "10.0",
+      "area_saf_ha": "0.0",
+      "manejo": "convencional",
+      "fonte_agua": "igarapé",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 8,
+    "fields": {
+      "produtor": 6,
+      "nome": "Sítio Boa Esperança",
+      "comunidade": "Rio Uraim",
+      "referencia": "Pela estrada do Rio Uraim, 2 km depois da escola",
+      "distancia_sede_km": 40,
+      "area_total_ha": "18.0",
+      "area_saf_ha": "14.0",
+      "manejo": "organico",
+      "fonte_agua": "rio",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 9,
+    "fields": {
+      "produtor": 7,
+      "nome": "Fazenda Santa Luzia",
+      "comunidade": "BR-010",
+      "referencia": "BR-010, km 210, lado esquerdo de quem vai para Belém",
+      "distancia_sede_km": 18,
+      "area_total_ha": "45.0",
+      "area_saf_ha": "5.0",
+      "manejo": "convencional",
+      "fonte_agua": "poço artesiano",
+      "casa_de_farinha": false,
+      "camara_fria": false
+    }
+  },
+  {
+    "model": "catalogo.propriedade",
+    "pk": 10,
+    "fields": {
+      "produtor": 8,
+      "nome": "Sítio São Francisco",
+      "comunidade": "Colônia do Uraim",
+      "referencia": "Vicinal do Uraim, primeira entrada depois do posto",
+      "distancia_sede_km": 27,
+      "area_total_ha": "5.0",
+      "area_saf_ha": "3.5",
+      "manejo": "transicao",
+      "fonte_agua": "poço amazonas",
+      "casa_de_farinha": false,
+      "camara_fria": true
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 1,
+    "fields": {
+      "nome": "Açaí médio",
+      "slug": "acai-medio",
+      "variedade": "médio (tipo B)",
+      "descricao": "Açaí batido na hora, consistência média. Bom para tomar com farinha e peixe.",
+      "categoria": 1,
+      "produtor": 1,
+      "propriedade": 1,
+      "unidade": 2,
+      "preco_centavos": 2200,
+      "estoque": 40,
+      "destaque": false,
+      "conservacao": "Geladeira, consumir em até 2 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 2,
+    "fields": {
+      "nome": "Açaí grosso",
+      "slug": "acai-grosso",
+      "variedade": "grosso (tipo A)",
+      "descricao": "O mais encorpado da casa: pouca água, muito fruto.",
+      "categoria": 1,
+      "produtor": 1,
+      "propriedade": 1,
+      "unidade": 2,
+      "preco_centavos": 3000,
+      "estoque": 25,
+      "destaque": true,
+      "conservacao": "Geladeira, consumir em até 2 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 3,
+    "fields": {
+      "nome": "Açaí em fruto",
+      "slug": "acai-em-fruto",
+      "variedade": "fruto in natura",
+      "descricao": "A rasa de açaí colhido de madrugada, para quem bate em casa.",
+      "categoria": 1,
+      "produtor": 1,
+      "propriedade": 1,
+      "unidade": 6,
+      "preco_centavos": 12000,
+      "estoque": 6,
+      "destaque": false,
+      "conservacao": "Bater em até 24 horas depois da colheita.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 4,
+    "fields": {
+      "nome": "Farinha d'água",
+      "slug": "farinha-dagua",
+      "variedade": "d'água, grossa",
+      "descricao": "Farinha de puba torrada no forno de lenha. Crocante, amarelinha.",
+      "categoria": 3,
+      "produtor": 2,
+      "propriedade": 2,
+      "unidade": 5,
+      "preco_centavos": 15000,
+      "estoque": 12,
+      "destaque": true,
+      "conservacao": "Local seco, em recipiente fechado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 5,
+    "fields": {
+      "nome": "Farinha seca",
+      "slug": "farinha-seca",
+      "variedade": "seca, fina",
+      "descricao": "Farinha branca e fina, boa para farofa.",
+      "categoria": 3,
+      "produtor": 2,
+      "propriedade": 2,
+      "unidade": 1,
+      "preco_centavos": 1000,
+      "estoque": 60,
+      "destaque": false,
+      "conservacao": "Local seco, em recipiente fechado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 6,
+    "fields": {
+      "nome": "Tucupi",
+      "slug": "tucupi",
+      "variedade": "fervido",
+      "descricao": "Caldo da mandioca-brava já fervido e temperado, pronto para o pato.",
+      "categoria": 3,
+      "produtor": 2,
+      "propriedade": 2,
+      "unidade": 2,
+      "preco_centavos": 800,
+      "estoque": 30,
+      "destaque": false,
+      "conservacao": "Geladeira, até 7 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 7,
+    "fields": {
+      "nome": "Goma de tapioca",
+      "slug": "goma-de-tapioca",
+      "variedade": "hidratada",
+      "descricao": "Goma fresca, é só peneirar e levar à frigideira.",
+      "categoria": 3,
+      "produtor": 2,
+      "propriedade": 2,
+      "unidade": 1,
+      "preco_centavos": 1200,
+      "estoque": 20,
+      "destaque": false,
+      "conservacao": "Geladeira, até 5 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 8,
+    "fields": {
+      "nome": "Jambu",
+      "slug": "jambu",
+      "variedade": "folha e flor",
+      "descricao": "O maço que faz a boca tremer. Colhido na véspera.",
+      "categoria": 7,
+      "produtor": 3,
+      "propriedade": 4,
+      "unidade": 7,
+      "preco_centavos": 400,
+      "estoque": 50,
+      "destaque": false,
+      "conservacao": "Geladeira, embrulhado em pano úmido.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 9,
+    "fields": {
+      "nome": "Cheiro-verde",
+      "slug": "cheiro-verde",
+      "variedade": "cebolinha e coentro",
+      "descricao": "Cebolinha e coentro no mesmo maço, do jeito da feira.",
+      "categoria": 7,
+      "produtor": 3,
+      "propriedade": 4,
+      "unidade": 7,
+      "preco_centavos": 300,
+      "estoque": 80,
+      "destaque": false,
+      "conservacao": "Geladeira, até 5 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 10,
+    "fields": {
+      "nome": "Chicória-do-pará",
+      "slug": "chicoria-do-para",
+      "variedade": "folha larga",
+      "descricao": "Também chamada de coentrão. Indispensável no tacacá.",
+      "categoria": 7,
+      "produtor": 3,
+      "propriedade": 4,
+      "unidade": 7,
+      "preco_centavos": 350,
+      "estoque": 40,
+      "destaque": false,
+      "conservacao": "Geladeira, até 5 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 11,
+    "fields": {
+      "nome": "Pimenta-de-cheiro",
+      "slug": "pimenta-de-cheiro",
+      "variedade": "amarela e vermelha",
+      "descricao": "Perfume forte, ardência leve.",
+      "categoria": 7,
+      "produtor": 3,
+      "propriedade": 4,
+      "unidade": 11,
+      "preco_centavos": 500,
+      "estoque": 35,
+      "destaque": false,
+      "conservacao": "Geladeira, até 10 dias.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 12,
+    "fields": {
+      "nome": "Mel de uruçu",
+      "slug": "mel-de-urucu",
+      "variedade": "abelha sem ferrão",
+      "descricao": "Mel mais líquido e ácido que o comum. Pote de 500 g.",
+      "categoria": 6,
+      "produtor": 4,
+      "propriedade": 5,
+      "unidade": 9,
+      "preco_centavos": 6000,
+      "estoque": 15,
+      "destaque": true,
+      "conservacao": "Geladeira, depois de aberto.",
+      "validade": "2027-06-30"
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 13,
+    "fields": {
+      "nome": "Mel de abelha africanizada",
+      "slug": "mel-de-abelha-africanizada",
+      "variedade": "florada silvestre",
+      "descricao": "Vidro de 700 g. Cristaliza no frio, e isso é sinal de mel puro.",
+      "categoria": 6,
+      "produtor": 4,
+      "propriedade": 5,
+      "unidade": 10,
+      "preco_centavos": 3500,
+      "estoque": 25,
+      "destaque": false,
+      "conservacao": "Temperatura ambiente.",
+      "validade": "2028-03-31"
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 14,
+    "fields": {
+      "nome": "Pólen apícola",
+      "slug": "polen-apicola",
+      "variedade": "desidratado",
+      "descricao": "Vendido a granel, pesado na hora.",
+      "categoria": 6,
+      "produtor": 4,
+      "propriedade": 5,
+      "unidade": 3,
+      "preco_centavos": 30,
+      "estoque": 2000,
+      "destaque": false,
+      "conservacao": "Geladeira, em pote fechado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 15,
+    "fields": {
+      "nome": "Pimenta-do-reino preta",
+      "slug": "pimenta-do-reino-preta",
+      "variedade": "preta, em grão",
+      "descricao": "A saca de 60 kg, para quem revende ou tem restaurante.",
+      "categoria": 4,
+      "produtor": 5,
+      "propriedade": 6,
+      "unidade": 4,
+      "preco_centavos": 150000,
+      "estoque": 8,
+      "destaque": false,
+      "conservacao": "Local seco e arejado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 16,
+    "fields": {
+      "nome": "Pimenta-do-reino branca",
+      "slug": "pimenta-do-reino-branca",
+      "variedade": "branca, em grão",
+      "descricao": "Grão descascado na água, sabor mais suave que a preta.",
+      "categoria": 4,
+      "produtor": 5,
+      "propriedade": 7,
+      "unidade": 1,
+      "preco_centavos": 4500,
+      "estoque": 30,
+      "destaque": false,
+      "conservacao": "Local seco, em recipiente fechado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 17,
+    "fields": {
+      "nome": "Amêndoa de cacau",
+      "slug": "amendoa-de-cacau",
+      "variedade": "fermentada e seca",
+      "descricao": "Fermentada seis dias no cocho e seca ao sol.",
+      "categoria": 5,
+      "produtor": 6,
+      "propriedade": 8,
+      "unidade": 1,
+      "preco_centavos": 5000,
+      "estoque": 40,
+      "destaque": false,
+      "conservacao": "Local seco e arejado.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 18,
+    "fields": {
+      "nome": "Chocolate 70%",
+      "slug": "chocolate-70",
+      "variedade": "barra de 100 g",
+      "descricao": "Feito em casa com o cacau do sítio e açúcar, nada mais.",
+      "categoria": 5,
+      "produtor": 6,
+      "propriedade": 8,
+      "unidade": 12,
+      "preco_centavos": 1800,
+      "estoque": 45,
+      "destaque": false,
+      "conservacao": "Local fresco, longe do sol.",
+      "validade": "2027-01-31"
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 19,
+    "fields": {
+      "nome": "Nibs de cacau",
+      "slug": "nibs-de-cacau",
+      "variedade": "torrado",
+      "descricao": "Pedacinhos de amêndoa torrada. Vai bem no açaí.",
+      "categoria": 5,
+      "produtor": 6,
+      "propriedade": 8,
+      "unidade": 9,
+      "preco_centavos": 2500,
+      "estoque": 20,
+      "destaque": false,
+      "conservacao": "Local seco, em pote fechado.",
+      "validade": "2027-03-31"
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 20,
+    "fields": {
+      "nome": "Banana-prata",
+      "slug": "banana-prata",
+      "variedade": "prata",
+      "descricao": "O cacho inteiro, colhido ainda verde para amadurecer em casa.",
+      "categoria": 8,
+      "produtor": 7,
+      "propriedade": 9,
+      "unidade": 13,
+      "preco_centavos": 2500,
+      "estoque": 18,
+      "destaque": false,
+      "conservacao": "Temperatura ambiente.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 21,
+    "fields": {
+      "nome": "Laranja",
+      "slug": "laranja",
+      "variedade": "pera",
+      "descricao": "O cento de laranja-pera, boa de suco.",
+      "categoria": 8,
+      "produtor": 7,
+      "propriedade": 9,
+      "unidade": 14,
+      "preco_centavos": 4000,
+      "estoque": 10,
+      "destaque": false,
+      "conservacao": "Temperatura ambiente.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 22,
+    "fields": {
+      "nome": "Maracujá",
+      "slug": "maracuja",
+      "variedade": "azedo",
+      "descricao": "A dúzia do maracujá amarelo, casca enrugada é sinal de maduro.",
+      "categoria": 8,
+      "produtor": 7,
+      "propriedade": 9,
+      "unidade": 8,
+      "preco_centavos": 1200,
+      "estoque": 30,
+      "destaque": false,
+      "conservacao": "Temperatura ambiente.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 23,
+    "fields": {
+      "nome": "Polpa de cupuaçu",
+      "slug": "polpa-de-cupuacu",
+      "variedade": "congelada",
+      "descricao": "Pacotes de 1 kg, sem açúcar e sem conservante.",
+      "categoria": 2,
+      "produtor": 8,
+      "propriedade": 10,
+      "unidade": 1,
+      "preco_centavos": 2200,
+      "estoque": 35,
+      "destaque": false,
+      "conservacao": "Congelador, até 6 meses.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.produto",
+    "pk": 24,
+    "fields": {
+      "nome": "Polpa de bacuri",
+      "slug": "polpa-de-bacuri",
+      "variedade": "congelada",
+      "descricao": "Bacuri é fruta de safra curta; a polpa guarda o ano inteiro.",
+      "categoria": 2,
+      "produtor": 8,
+      "propriedade": 10,
+      "unidade": 1,
+      "preco_centavos": 3500,
+      "estoque": 15,
+      "destaque": false,
+      "conservacao": "Congelador, até 6 meses.",
+      "validade": null
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 1,
+    "fields": {
+      "produto": 1,
+      "mes_inicio": 8,
+      "mes_fim": 12,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 2,
+    "fields": {
+      "produto": 1,
+      "mes_inicio": 1,
+      "mes_fim": 3,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 3,
+    "fields": {
+      "produto": 1,
+      "mes_inicio": 4,
+      "mes_fim": 7,
+      "situacao": "entressafra"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 4,
+    "fields": {
+      "produto": 2,
+      "mes_inicio": 8,
+      "mes_fim": 12,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 5,
+    "fields": {
+      "produto": 2,
+      "mes_inicio": 1,
+      "mes_fim": 3,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 6,
+    "fields": {
+      "produto": 2,
+      "mes_inicio": 4,
+      "mes_fim": 7,
+      "situacao": "entressafra"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 7,
+    "fields": {
+      "produto": 3,
+      "mes_inicio": 8,
+      "mes_fim": 12,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 8,
+    "fields": {
+      "produto": 3,
+      "mes_inicio": 1,
+      "mes_fim": 7,
+      "situacao": "fora"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 9,
+    "fields": {
+      "produto": 4,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 10,
+    "fields": {
+      "produto": 5,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 11,
+    "fields": {
+      "produto": 6,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 12,
+    "fields": {
+      "produto": 7,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 13,
+    "fields": {
+      "produto": 8,
+      "mes_inicio": 12,
+      "mes_fim": 5,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 14,
+    "fields": {
+      "produto": 8,
+      "mes_inicio": 6,
+      "mes_fim": 11,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 15,
+    "fields": {
+      "produto": 9,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 16,
+    "fields": {
+      "produto": 10,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 17,
+    "fields": {
+      "produto": 11,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 18,
+    "fields": {
+      "produto": 12,
+      "mes_inicio": 9,
+      "mes_fim": 12,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 19,
+    "fields": {
+      "produto": 12,
+      "mes_inicio": 1,
+      "mes_fim": 2,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 20,
+    "fields": {
+      "produto": 12,
+      "mes_inicio": 3,
+      "mes_fim": 8,
+      "situacao": "entressafra"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 21,
+    "fields": {
+      "produto": 13,
+      "mes_inicio": 8,
+      "mes_fim": 11,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 22,
+    "fields": {
+      "produto": 13,
+      "mes_inicio": 12,
+      "mes_fim": 7,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 23,
+    "fields": {
+      "produto": 14,
+      "mes_inicio": 8,
+      "mes_fim": 11,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 24,
+    "fields": {
+      "produto": 14,
+      "mes_inicio": 12,
+      "mes_fim": 7,
+      "situacao": "entressafra"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 25,
+    "fields": {
+      "produto": 15,
+      "mes_inicio": 7,
+      "mes_fim": 10,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 26,
+    "fields": {
+      "produto": 15,
+      "mes_inicio": 11,
+      "mes_fim": 6,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 27,
+    "fields": {
+      "produto": 16,
+      "mes_inicio": 7,
+      "mes_fim": 10,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 28,
+    "fields": {
+      "produto": 16,
+      "mes_inicio": 11,
+      "mes_fim": 6,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 29,
+    "fields": {
+      "produto": 17,
+      "mes_inicio": 4,
+      "mes_fim": 7,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 30,
+    "fields": {
+      "produto": 17,
+      "mes_inicio": 8,
+      "mes_fim": 3,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 31,
+    "fields": {
+      "produto": 18,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 32,
+    "fields": {
+      "produto": 19,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 33,
+    "fields": {
+      "produto": 20,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 34,
+    "fields": {
+      "produto": 21,
+      "mes_inicio": 5,
+      "mes_fim": 8,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 35,
+    "fields": {
+      "produto": 21,
+      "mes_inicio": 9,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 36,
+    "fields": {
+      "produto": 21,
+      "mes_inicio": 1,
+      "mes_fim": 4,
+      "situacao": "entressafra"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 37,
+    "fields": {
+      "produto": 22,
+      "mes_inicio": 11,
+      "mes_fim": 2,
+      "situacao": "pico"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 38,
+    "fields": {
+      "produto": 22,
+      "mes_inicio": 3,
+      "mes_fim": 10,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 39,
+    "fields": {
+      "produto": 23,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  },
+  {
+    "model": "catalogo.janelasafra",
+    "pk": 40,
+    "fields": {
+      "produto": 24,
+      "mes_inicio": 1,
+      "mes_fim": 12,
+      "situacao": "disponivel"
+    }
+  }
+]

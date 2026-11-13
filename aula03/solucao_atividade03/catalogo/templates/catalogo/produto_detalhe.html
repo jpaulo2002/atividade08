@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}{{ produto.nome }} - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <p class="trilha">
+    <a href="{% url 'catalogo:home' %}">Início</a> &rsaquo;
+    <a href="{% url 'catalogo:produtos' %}">Produtos</a> &rsaquo;
+    {{ produto.nome }}
+  </p>
+
+  <div class="detalhe">
+    <div>
+      <p class="etiqueta">{{ produto.categoria.nome }}</p>
+      <h1>{{ produto.nome }}</h1>
+      <p class="variedade">{{ produto.variedade }}</p>
+      <p class="preco">
+        {{ produto.preco_centavos|reais }} <span>/ {{ produto.unidade.nome }}</span>
+      </p>
+
+      {% if produto.unidade.fracionavel %}
+        <p class="aviso-unidade">
+          Aceita quantidade quebrada: você pode pedir, por exemplo, 1,5
+          {{ produto.unidade.sigla }}.
+        </p>
+      {% else %}
+        <p class="aviso-unidade">
+          Vendido só por unidade inteira ({{ produto.unidade.nome }}): não aceita
+          quantidade quebrada.
+        </p>
+      {% endif %}
+
+      {{ produto.descricao|linebreaks }}
+      <p><strong>Conservação:</strong> {{ produto.conservacao }}</p>
+    </div>
+
+    <aside class="caixa-produtor">
+      <h2>Quem produz</h2>
+      <p><strong><a href="{% url 'catalogo:produtor' slug=produto.produtor.slug %}">{{ produto.produtor.nome }}</a></strong></p>
+      <p>{{ produto.produtor.comunidade }}</p>
+      <p>Cooperativa: {{ produto.produtor.cooperativa|default:"independente" }}</p>
+      <p>Pagamento: {{ produto.produtor.formas_pagamento }}</p>
+      <p>Pedido mínimo: {{ produto.produtor.pedido_minimo_centavos|reais }}</p>
+    </aside>
+  </div>
+{% endblock %}

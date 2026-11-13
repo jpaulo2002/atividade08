@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+  <section class="hero">
+    <h1>Da roça de Paragominas para a sua mesa</h1>
+    <p>
+      {{ total }} produtos de agricultores familiares da Colônia do Uraim,
+      do Rio Capim e dos ramais da BR-010. Você compra direto de quem planta.
+    </p>
+    <a class="botao" href="{% url 'catalogo:produtos' %}">Ver todos os produtos</a>
+  </section>
+
+  <h2>Destaques da semana</h2>
+  <div class="grade">
+    {% for p in destaques %}
+      {% include "catalogo/_cartao_produto.html" with produto=p %}
+    {% endfor %}
+  </div>
+{% endblock %}

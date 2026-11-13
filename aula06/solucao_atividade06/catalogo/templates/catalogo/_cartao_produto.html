@@ -1,0 +1,12 @@
+{% load moeda %}
+<article class="cartao">
+  <p class="etiqueta">{{ produto.categoria.nome }}</p>
+  <h3>
+    <a href="{% url 'catalogo:produto' slug=produto.slug %}">{{ produto.nome }}</a>
+  </h3>
+  <p class="variedade">{{ produto.variedade }}</p>
+  <p class="produtor">{{ produto.produtor.nome }}</p>
+  <p class="preco">
+    {{ produto.preco_centavos|reais }} <span>/ {{ produto.unidade.nome }}</span>
+  </p>
+</article>

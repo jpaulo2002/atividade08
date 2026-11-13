@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}{{ produtor.nome }} - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <p class="trilha">
+    <a href="{% url 'catalogo:home' %}">Início</a> &rsaquo;
+    <a href="{% url 'catalogo:produtores' %}">Produtores</a> &rsaquo;
+    {{ produtor.nome }}
+  </p>
+
+  <section class="perfil">
+    <h1>{{ produtor.nome }}</h1>
+    <p class="comunidade">{{ produtor.comunidade }}</p>
+    <p>{{ produtor.descricao }}</p>
+    <dl>
+      <dt>CAF</dt><dd>{{ produtor.caf }}</dd>
+      <dt>Cooperativa</dt><dd>{{ produtor.cooperativa|default:"independente" }}</dd>
+      <dt>Pagamento</dt><dd>{{ produtor.formas_pagamento }}</dd>
+      <dt>Chave Pix</dt><dd>{{ produtor.chave_pix }}</dd>
+      <dt>Pedido mínimo</dt><dd>{{ produtor.pedido_minimo_centavos|reais }}</dd>
+    </dl>
+  </section>
+
+  <h2>Produtos deste produtor</h2>
+  <div class="grade">
+    {% for p in produtos %}
+      {% include "catalogo/_cartao_produto.html" with produto=p %}
+    {% endfor %}
+  </div>
+{% endblock %}

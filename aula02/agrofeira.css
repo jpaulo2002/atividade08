@@ -1,0 +1,187 @@
+/* AgroFeira Paragominas — folha de estilos fornecida no encontro 2.
+   Baixe para static/css/agrofeira.css e NAO edite: o assunto da aula e o
+   servidor, nao o CSS. Todas as classes usadas nos templates estao aqui. */
+
+:root {
+  --verde: #1f5132;
+  --verde-claro: #e6efe7;
+  --acai: #4b1f4f;
+  --creme: #faf6ee;
+  --texto: #222;
+  --cinza: #6b6b6b;
+  --borda: #e2dccf;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto);
+  background: var(--creme);
+  line-height: 1.5;
+}
+
+a { color: var(--verde); }
+
+/* ---------- topo e rodape ---------- */
+.topo {
+  background: var(--verde);
+  color: #fff;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.marca { color: #fff; font-size: 1.4rem; font-weight: 700; text-decoration: none; }
+.marca span { font-weight: 400; opacity: .8; }
+.topo nav a {
+  color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500;
+  border-bottom: 2px solid transparent; padding-bottom: 2px;
+}
+.topo nav a:hover { border-bottom-color: #fff; }
+
+main { max-width: 1080px; margin: 0 auto; padding: 28px 32px 48px; }
+
+.rodape {
+  border-top: 1px solid var(--borda);
+  color: var(--cinza);
+  font-size: .9rem;
+  text-align: center;
+  padding: 20px 32px;
+}
+
+/* ---------- home ---------- */
+.hero {
+  background: var(--acai);
+  color: #fff;
+  border-radius: 14px;
+  padding: 32px 36px;
+  margin-bottom: 28px;
+}
+.hero h1 { margin: 0 0 8px; font-size: 2rem; }
+.hero p { margin: 0 0 18px; max-width: 640px; opacity: .92; }
+.botao {
+  display: inline-block;
+  background: #fff;
+  color: var(--acai);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+}
+
+h2 { color: var(--verde); margin: 8px 0 16px; }
+
+/* ---------- grade de cartoes ---------- */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+.cartao {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.cartao h3 { margin: 4px 0 2px; font-size: 1.1rem; }
+.cartao h3 a { text-decoration: none; }
+.cartao h3 a:hover { text-decoration: underline; }
+.etiqueta {
+  align-self: flex-start;
+  width: fit-content;
+  background: var(--verde-claro);
+  color: var(--verde);
+  font-size: .75rem;
+  font-weight: 600;
+  border-radius: 99px;
+  padding: 2px 10px;
+  margin: 0;
+}
+.variedade { color: var(--cinza); margin: 0; font-size: .9rem; }
+.produtor { margin: 8px 0 0; font-size: .9rem; }
+.preco { margin: 12px 0 0; font-size: 1.25rem; font-weight: 700; color: var(--acai); margin-top: auto; padding-top: 12px; }
+.preco span { font-size: .85rem; font-weight: 400; color: var(--cinza); }
+
+/* ---------- busca ---------- */
+.busca { display: flex; gap: 8px; margin: 0 0 18px; }
+.busca input {
+  flex: 1; max-width: 380px; font: inherit;
+  padding: 8px 12px; border: 1px solid var(--borda); border-radius: 8px;
+}
+.busca button {
+  font: inherit; font-weight: 600; cursor: pointer;
+  background: var(--verde); color: #fff; border: 0; border-radius: 8px; padding: 8px 16px;
+}
+.resumo { color: var(--cinza); margin: -6px 0 18px; }
+.vazio {
+  background: #fff; border: 1px dashed var(--borda); border-radius: 12px;
+  padding: 24px; text-align: center; color: var(--cinza);
+}
+
+/* ---------- pagina de um produto ---------- */
+.trilha { font-size: .9rem; color: var(--cinza); margin-bottom: 12px; }
+.detalhe {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+.detalhe h1 { margin: 8px 0 0; }
+.detalhe .preco { font-size: 1.8rem; padding-top: 4px; }
+.aviso-unidade {
+  background: var(--creme); border-left: 4px solid var(--acai);
+  padding: 8px 12px; border-radius: 4px; font-size: .92rem;
+}
+.caixa-produtor {
+  background: var(--verde-claro);
+  border-radius: 12px;
+  padding: 18px 20px;
+  align-self: start;
+}
+.caixa-produtor h2 { font-size: 1.05rem; margin: 0 0 6px; }
+.caixa-produtor p { margin: 4px 0; font-size: .92rem; }
+
+/* ---------- produtores ---------- */
+.lista-produtores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+.cartao-produtor {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-left: 6px solid var(--verde);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.cartao-produtor h3 { margin: 0 0 4px; }
+.cartao-produtor h3 a { text-decoration: none; }
+.cartao-produtor p { margin: 2px 0; font-size: .92rem; color: var(--cinza); }
+
+.perfil {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 24px 32px;
+  margin-bottom: 28px;
+}
+.perfil h1 { margin: 0 0 4px; color: var(--verde); }
+.perfil .comunidade { color: var(--cinza); margin: 0 0 14px; }
+.perfil dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 16px 0 0; }
+.perfil dt { font-weight: 600; }
+.perfil dd { margin: 0; }
+
+@media (max-width: 720px) {
+  main { padding: 20px 16px 40px; }
+  .detalhe { grid-template-columns: 1fr; padding: 20px; }
+  .topo nav a { margin: 0 16px 0 0; }
+}

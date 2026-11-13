@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Painel - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Painel de {{ produtor.nome }}</h2>
+  <p class="resumo">
+    {{ produtos|length }} produto{{ produtos|length|pluralize }} cadastrado{{ produtos|length|pluralize }};
+    {{ sem_estoque }} sem estoque.
+  </p>
+
+  <p class="acoes">
+    <a class="botao" href="{% url 'catalogo:painel_produto_novo' %}">Cadastrar produto</a>
+    {% url 'catalogo:painel_pedidos' as url_pedidos %}
+    {% if url_pedidos %}<a href="{{ url_pedidos }}">Ver os pedidos</a>{% endif %}
+  </p>
+
+  {% if produtos %}
+    <table class="carrinho">
+      <thead>
+        <tr><th>Produto</th><th>Preço</th><th>Estoque</th><th></th></tr>
+      </thead>
+      <tbody>
+        {% for produto in produtos %}
+          <tr>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.preco_centavos|reais }} / {{ produto.unidade.sigla }}</td>
+            <td>{{ produto.estoque|floatformat:"-3" }}</td>
+            <td><a href="{% url 'catalogo:painel_produto_editar' produto.pk %}">Editar</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="vazio">Você ainda não cadastrou nenhum produto.</p>
+  {% endif %}
+{% endblock %}

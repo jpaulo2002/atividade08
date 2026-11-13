@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block titulo %}Produtos - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Todos os produtos</h2>
+
+  <form class="busca" method="get" action="{% url 'catalogo:produtos' %}">
+    <input type="search" name="q" value="{{ busca }}"
+           placeholder="Buscar pelo nome, ex.: farinha">
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if busca %}
+    <p class="resumo">
+      Busca por "{{ busca }}": {{ produtos|length }}
+      produto{{ produtos|length|pluralize }}.
+    </p>
+  {% else %}
+    <p class="resumo">{{ produtos|length }} produto{{ produtos|length|pluralize }}</p>
+  {% endif %}
+
+  <div class="grade">
+    {% for p in produtos %}
+      {% include "catalogo/_cartao_produto.html" with produto=p %}
+    {% empty %}
+      <p class="vazio">Nenhum produto encontrado.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

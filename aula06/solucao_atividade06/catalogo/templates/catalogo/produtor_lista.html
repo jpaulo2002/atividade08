@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Produtores - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Quem planta, colhe e vende na feira</h2>
+
+  <form class="busca" method="get" action="{% url 'catalogo:produtores' %}">
+    <input type="search" name="q" value="{{ busca }}"
+           placeholder="Nome ou comunidade, ex.: uraim">
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if busca %}
+    <p class="resumo">
+      Busca por "{{ busca }}": {{ page_obj.paginator.count }}
+      produtor{{ page_obj.paginator.count|pluralize:"es" }}.
+    </p>
+  {% endif %}
+
+  <div class="lista-produtores">
+    {% for pr in page_obj %}
+      <article class="cartao-produtor">
+        <h3>
+          <a href="{% url 'catalogo:produtor' slug=pr.slug %}">{{ pr.nome }}</a>
+        </h3>
+        <p>{{ pr.comunidade }}</p>
+        <p class="contagem">{{ pr.num_produtos }} produto{{ pr.num_produtos|pluralize }}</p>
+        <p class="sitios">
+          {% for prop in pr.propriedades.all %}{{ prop.nome }}{% if not forloop.last %}, {% endif %}{% endfor %}
+        </p>
+        <p>Cooperativa: {{ pr.cooperativa|default:"independente" }}</p>
+        <p>Pedido mínimo: {{ pr.pedido_minimo_centavos|reais }}</p>
+      </article>
+    {% empty %}
+      <p class="vazio">Nenhum produtor encontrado.</p>
+    {% endfor %}
+  </div>
+
+  {% if page_obj.paginator.num_pages > 1 %}
+    <nav class="paginacao">
+      {% if page_obj.has_previous %}
+        <a href="?{% if parametros %}{{ parametros }}&amp;{% endif %}page={{ page_obj.previous_page_number }}">&lsaquo; anterior</a>
+      {% endif %}
+      <span>página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}
+        <a href="?{% if parametros %}{{ parametros }}&amp;{% endif %}page={{ page_obj.next_page_number }}">próxima &rsaquo;</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

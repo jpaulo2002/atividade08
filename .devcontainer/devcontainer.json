@@ -1,0 +1,10 @@
+{
+  "name": "DWM — AgroFeira (servidor)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13-bookworm",
+  "postCreateCommand": "pip install --user -r requirements.txt 2>/dev/null || true",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}

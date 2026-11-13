@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Fechar o pedido - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Fechar o pedido</h2>
+
+  <div class="checkout">
+    <form class="dados-pedido" method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="campo">
+        <label for="{{ form.comprador.id_for_label }}">Seu nome</label>
+        {{ form.comprador }}
+        {{ form.comprador.errors }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.telefone.id_for_label }}">Telefone</label>
+        {{ form.telefone }}
+        {{ form.telefone.errors }}
+      </div>
+
+      <div class="campo">
+        <label for="{{ form.ponto_retirada.id_for_label }}">Onde você vai retirar</label>
+        {{ form.ponto_retirada }}
+        {{ form.ponto_retirada.errors }}
+      </div>
+
+      <button type="submit">Confirmar o pedido</button>
+    </form>
+
+    <aside class="resumo-pedido">
+      <h3>Seu carrinho</h3>
+      <ul>
+        {% for item in itens %}
+          <li>
+            <span>
+              {{ item.quantidade|floatformat:"-3" }} {{ item.produto.unidade.sigla }}
+              de {{ item.produto.nome }}
+            </span>
+            <span>{{ item.subtotal_centavos|reais }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="total">Total: {{ total_centavos|reais }}</p>
+      <p><a href="{% url 'pedidos:carrinho' %}">Voltar ao carrinho</a></p>
+    </aside>
+  </div>
+{% endblock %}

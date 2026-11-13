@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block titulo %}Produtos - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Todos os produtos</h2>
+
+  <form class="filtros" method="get" action="{% url 'catalogo:produtos' %}">
+    <label>Nome
+      <input type="search" name="q" value="{{ busca }}" placeholder="ex.: farinha">
+    </label>
+    <label>Categoria
+      <select name="categoria">
+        <option value="">todas</option>
+        {% for c in categorias %}
+          <option value="{{ c.slug }}" {% if c.slug == categoria %}selected{% endif %}>{{ c.nome }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Produtor
+      <select name="produtor">
+        <option value="">todos</option>
+        {% for pr in produtores %}
+          <option value="{{ pr.slug }}" {% if pr.slug == produtor %}selected{% endif %}>{{ pr.nome }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Ordem
+      <select name="ordem">
+        <option value="nome" {% if ordem == "nome" %}selected{% endif %}>nome</option>
+        <option value="preco" {% if ordem == "preco" %}selected{% endif %}>menor preço</option>
+        <option value="-preco" {% if ordem == "-preco" %}selected{% endif %}>maior preço</option>
+      </select>
+    </label>
+    <button type="submit">Filtrar</button>
+    <a class="limpar" href="{% url 'catalogo:produtos' %}">limpar</a>
+  </form>
+
+  <p class="resumo">{{ page_obj.paginator.count }} produto{{ page_obj.paginator.count|pluralize }}</p>
+
+  <div class="grade">
+    {% for p in page_obj %}
+      {% include "catalogo/_cartao_produto.html" with produto=p %}
+    {% empty %}
+      <p class="vazio">Nenhum produto encontrado.</p>
+    {% endfor %}
+  </div>
+
+  {% if page_obj.paginator.num_pages > 1 %}
+    <nav class="paginacao">
+      {% if page_obj.has_previous %}
+        <a href="?{{ parametros }}page={{ page_obj.previous_page_number }}">&lsaquo; anterior</a>
+      {% endif %}
+      <span>página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+      {% if page_obj.has_next %}
+        <a href="?{{ parametros }}page={{ page_obj.next_page_number }}">próxima &rsaquo;</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

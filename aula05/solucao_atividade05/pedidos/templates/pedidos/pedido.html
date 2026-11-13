@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Pedido recebido - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Pedido recebido</h2>
+
+  <section class="confirmacao">
+    <p>Código do pedido: <span class="codigo">{{ pedido.codigo }}</span></p>
+    <p>Guarde este código: ele é a sua chave para consultar o pedido.</p>
+
+    <h3>Quem pediu</h3>
+    <p>{{ pedido.comprador }} — {{ pedido.telefone }}</p>
+
+    <h3>Onde retirar</h3>
+    <p>
+      <strong>{{ pedido.ponto_retirada.nome }}</strong><br>
+      {{ pedido.ponto_retirada.endereco }}<br>
+      {{ pedido.ponto_retirada.horario }}
+    </p>
+
+    <h3>O que você pediu</h3>
+    <table class="carrinho">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Produtor</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in itens %}
+          <tr>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.produtor }}</td>
+            <td>{{ item.quantidade|floatformat:"-3" }} {{ item.unidade }}</td>
+            <td>{{ item.preco_unitario_centavos|reais }}</td>
+            <td>{{ item.subtotal_centavos|reais }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">Total</td>
+          <td>{{ total_centavos|reais }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+{% endblock %}

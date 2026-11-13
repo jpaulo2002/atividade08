@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Pedido - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Pedido de {{ pedido.comprador }}</h2>
+
+  <section class="confirmacao">
+    <p>Telefone: {{ pedido.telefone }}</p>
+    <p>Retirada: <strong>{{ pedido.ponto_retirada.nome }}</strong> — {{ pedido.ponto_retirada.horario }}</p>
+    <p>Situação: {{ pedido.get_situacao_display }}</p>
+
+    <h3>Os seus itens neste pedido</h3>
+    <table class="carrinho">
+      <thead>
+        <tr><th>Produto</th><th>Quantidade</th><th>Preço</th><th>Subtotal</th></tr>
+      </thead>
+      <tbody>
+        {% for linha in itens %}
+          <tr>
+            <td>{{ linha.item.nome_produto }}</td>
+            <td>{{ linha.item.quantidade|floatformat:"-3" }} {{ linha.item.nome_unidade }}</td>
+            <td>{{ linha.item.preco_unitario_centavos|reais }}</td>
+            <td>{{ linha.subtotal|reais }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr><td colspan="3">Total dos seus itens</td><td>{{ total_centavos|reais }}</td></tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <p><a href="{% url 'catalogo:painel_pedidos' %}">Voltar aos pedidos</a></p>
+{% endblock %}

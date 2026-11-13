@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load moeda %}
+
+{% block titulo %}Produtores - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Quem planta, colhe e vende na feira</h2>
+
+  <form class="busca" method="get" action="{% url 'catalogo:produtores' %}">
+    <input type="search" name="q" value="{{ busca }}"
+           placeholder="Nome ou comunidade, ex.: uraim">
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if busca %}
+    <p class="resumo">
+      Busca por "{{ busca }}": {{ produtores|length }}
+      produtor{{ produtores|length|pluralize:"es" }}.
+    </p>
+  {% endif %}
+
+  <div class="lista-produtores">
+    {% for pr in produtores %}
+      <article class="cartao-produtor">
+        <h3>
+          <a href="{% url 'catalogo:produtor' slug=pr.slug %}">{{ pr.nome }}</a>
+        </h3>
+        <p>{{ pr.comunidade }}</p>
+        <p>Cooperativa: {{ pr.cooperativa|default:"independente" }}</p>
+        <p>Pedido mínimo: {{ pr.pedido_minimo_centavos|reais }}</p>
+      </article>
+    {% empty %}
+      <p class="vazio">Nenhum produtor encontrado.</p>
+    {% endfor %}
+  </div>
+{% endblock %}

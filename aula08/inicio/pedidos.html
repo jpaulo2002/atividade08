@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block titulo %}Pedidos - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>Pedidos com os seus produtos</h2>
+
+  {% if pedidos %}
+    <table class="carrinho">
+      <thead>
+        <tr><th>Feito em</th><th>Comprador</th><th>Retirada</th><th>Seus itens</th><th></th></tr>
+      </thead>
+      <tbody>
+        {% for pedido in pedidos %}
+          <tr>
+            <td>{{ pedido.criado_em|date:"d/m/Y H:i" }}</td>
+            <td>{{ pedido.comprador }}</td>
+            <td>{{ pedido.ponto_retirada.nome }}</td>
+            <td>{{ pedido.meus_itens }}</td>
+            <td><a href="{% url 'catalogo:painel_pedido' pedido.codigo %}">Abrir</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="vazio">Nenhum pedido com os seus produtos ainda.</p>
+  {% endif %}
+
+  <p><a href="{% url 'catalogo:painel' %}">Voltar ao painel</a></p>
+{% endblock %}

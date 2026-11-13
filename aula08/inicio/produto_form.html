@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}{% if object %}Editar produto{% else %}Novo produto{% endif %} - AgroFeira Paragominas{% endblock %}
+
+{% block conteudo %}
+  <h2>{% if object %}Editar {{ object.nome }}{% else %}Novo produto{% endif %}</h2>
+
+  <form class="dados-pedido" method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for campo in form %}
+      <div class="campo">
+        {{ campo.label_tag }}
+        {{ campo }}
+        {{ campo.errors }}
+      </div>
+    {% endfor %}
+    <button type="submit">Salvar</button>
+  </form>
+
+  <p><a href="{% url 'catalogo:painel' %}">Voltar ao painel</a></p>
+{% endblock %}
