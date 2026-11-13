@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand, CommandError
-
+from . import views_painel
 from catalogo.models import Produtor
 
 SENHA = "feira2026"  # só para a aula; em produção cada pessoa escolhe a sua
